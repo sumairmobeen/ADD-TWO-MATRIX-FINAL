@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        display: inline-block;
+        padding: 20px;
+    }
+
+
+    
+</style>
+
+<body>
+    <div>
+        <span>Matrix-1:</span>
+        <div id="mat1"></div>
+    </div>
+    <div>
+        <span>Matrix-2 :</span>
+        <div id="mat2"></div>
+    </div>
+
+    <div>
+        <span>Result : </span>
+        <div id="result"></div>
+    </div>
+
+
+    <script>
+
+
+
+
+        let mat1 = [
+            [0, 0],
+            [0, 0]
+        ];
+        let mat2 = [
+            [0, 0],
+            [0, 0]
+        ];
+
+        result = [[0, 0],
+        [0, 0]]
+
+        for (let i = 0; i < mat1.length; i++) {
+            for (let j = 0; j < mat1[i].length; j++) {
+
+                console.log('i = ', i, 'and j = ', j);
+                mat1[i][j] = +prompt('getting matrix One data, Enter' + i + ',' + j + ',');
+            }
+
+        }
+
+        for (let i = 0; i < mat2.length; i++) {
+            for (let j = 0; j < mat2[i].length; j++) {
+
+                console.log('i = ', i, 'and j = ', j);
+                mat2[i][j] = +prompt('getting matrix Two data, Enter' + i + ',' + j + ',');
+            }
+
+        }
+
+
+        console.log(mat1);
+        console.log(mat2);
+
+        for (let i = 0; i < result.length; i++) {
+            for (let j = 0; j < result[i].length; j++) {
+
+
+                console.log("i = ", i, "and j = ", j);
+                result[i][j] = mat1[i][j] + mat2[i][j];
+
+            }
+            console.log(result);
+
+        }
+
+
+
+
+        document.getElementById('mat1').innerHTML = mat1;
+        document.getElementById('mat2').innerHTML = mat2;
+        document.getElementById('result').innerHTML = result;
+
+
+
+
+    </script>
+</body>
+
+</html>
